@@ -111,4 +111,3 @@ npm run pack:check    # inspect what npm pack would publish
 - [x] Real headless-profile compatibility (loads without webServer, doesn't break startup)
 - [ ] npm publish + `dsh-plugin` topic listing
 - [ ] Chrome Web Store submission
-- [ ] Real-account browser trial (requires loading the extension manually)

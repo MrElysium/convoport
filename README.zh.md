@@ -112,4 +112,3 @@ node test/extension-e2e.mjs    # 扩展→插件全链路（需先起 dsh web）
 - [x] Chrome 真机验证（popup 渲染、manifest 结构、扩展逻辑单测）
 - [ ] npm 发布 + `dsh-plugin` 话题收录
 - [ ] Chrome 商店提交
-- [ ] 真实 DeepSeek 账号浏览器实测（需用户配合加载扩展）
