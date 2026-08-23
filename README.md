@@ -2,6 +2,8 @@
 
 **DeepSeek Harness plugin: auto-capture your DeepSeek web conversations, store them 100% locally, import selected messages into workspace sessions, and see how many tokens you've saved.**
 
+[![npm version](https://img.shields.io/npm/v/convoport)](https://www.npmjs.com/package/convoport)
+[![npm downloads](https://img.shields.io/npm/dm/convoport)](https://www.npmjs.com/package/convoport)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 [中文说明](README.zh.md)
@@ -34,8 +36,7 @@ Browser extension (MV3)                dsh plugin (this repo)
 ## Install
 
 ```bash
-# 1. Install the plugin (after npm publish; for local dev use the same
-#    link: approach as dsh-md-quiz)
+# 1. Install the plugin
 dsh plugin --profile web add convoport
 # Restart dsh web, refresh the browser.
 
@@ -82,9 +83,10 @@ A `/capture` command also shows the stats overview right in the chat.
 ## Development
 
 ```bash
-# Local link install (same as dsh-md-quiz):
-# add "convoport": "link:E:/项目/convoport" to the
-# profile's package.json dependencies, then:
+# Local development (link install):
+# in your profile's package.json dependencies, add:
+#   "convoport": "link:<path-to-this-repo>"
+# then run:
 dsh plugin --profile web add convoport   # triggers reconcile
 ```
 

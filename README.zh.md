@@ -2,6 +2,8 @@
 
 **DeepSeek Harness 插件：全自动捕获 DeepSeek 网页版对话，100% 本地存储，按消息挑选导入工作区会话，并统计你节省的 Token。**
 
+[![npm version](https://img.shields.io/npm/v/convoport)](https://www.npmjs.com/package/convoport)
+[![npm downloads](https://img.shields.io/npm/dm/convoport)](https://www.npmjs.com/package/convoport)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 [English](README.md)
@@ -34,7 +36,7 @@
 ## 安装
 
 ```bash
-# 1. 安装插件（npm 发布后；本地开发用 dsh-md-quiz 同款 link 方式）
+# 1. 安装插件
 dsh plugin --profile web add convoport
 # 重启 dsh web，刷新浏览器
 
@@ -79,9 +81,9 @@ dsh plugin --profile web add convoport
 ## 开发
 
 ```bash
-# 本地 link 安装（照 dsh-md-quiz）：
-cd E:\项目\convoport
-# 在 profile 的 package.json dependencies 加 "convoport": "link:E:/项目/convoport"
+# 本地开发（link 安装）：
+# 在 profile 的 package.json dependencies 加：
+#   "convoport": "link:<仓库绝对路径>"
 # 然后 dsh plugin --profile web add convoport 触发 reconcile
 ```
 
