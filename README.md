@@ -98,16 +98,3 @@ npm test              # all suites except extension-e2e
 npm run test:e2e      # extension→plugin full chain (needs dsh web running)
 npm run pack:check    # inspect what npm pack would publish
 ```
-
-## Roadmap
-
-- [x] Plugin skeleton + storage + API + import-to-session + Web panel
-- [x] Browser extension (official DeepSeek API capture + batched reporting)
-- [x] End-to-end verified against a real `dsh web` (ingest/stats/import + client bundle injection)
-- [x] SQLite full-text index (`node:sqlite` FTS5 + LIKE fallback, `/capture/search`)
-- [x] Consecutive same-role message merging (import quality)
-- [x] Panel search box
-- [x] Chrome verification (popup render, manifest structure, extension logic tests)
-- [x] Real headless-profile compatibility (loads without webServer, doesn't break startup)
-- [ ] npm publish + `dsh-plugin` topic listing
-- [ ] Chrome Web Store submission

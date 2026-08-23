@@ -100,15 +100,3 @@ node test/background-queue.mjs # 扩展 background 队列（合并/去重/持久
 node test/http-e2e.mjs         # HTTP 全链路：ingest → stats → search → import
 node test/extension-e2e.mjs    # 扩展→插件全链路（需先起 dsh web）
 ```
-
-## 路线图
-
-- [x] 插件骨架 + 存储 + API + 导入会话 + Web 面板
-- [x] 浏览器扩展（extension/ 目录，DeepSeek 官方 API 捕获 + 批量上报）
-- [x] 真实 dsh web 端到端验证（ingest/stats/import + 客户端 bundle 注入）
-- [x] SQLite 全文索引（node:sqlite FTS5 + LIKE 兜底，`/capture/search`）
-- [x] 连续同角色消息合并（导入会话质量，与 ctxport 行为一致）
-- [x] 面板搜索框（调用 `/capture/search`）
-- [x] Chrome 真机验证（popup 渲染、manifest 结构、扩展逻辑单测）
-- [ ] npm 发布 + `dsh-plugin` 话题收录
-- [ ] Chrome 商店提交
