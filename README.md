@@ -1,4 +1,4 @@
-# dsh-deepseek-capture
+# convoport
 
 **DeepSeek Harness plugin: auto-capture your DeepSeek web conversations, store them 100% locally, import selected messages into workspace sessions, and see how many tokens you've saved.**
 
@@ -36,12 +36,12 @@ Browser extension (MV3)                dsh plugin (this repo)
 ```bash
 # 1. Install the plugin (after npm publish; for local dev use the same
 #    link: approach as dsh-md-quiz)
-dsh plugin --profile web add dsh-deepseek-capture
+dsh plugin --profile web add convoport
 # Restart dsh web, refresh the browser.
 
 # 2. Load the browser extension (extension/ ships inside the npm package;
 #    also available from this repo)
-#    Path: node_modules/dsh-deepseek-capture/extension/  (or repo extension/)
+#    Path: node_modules/convoport/extension/  (or repo extension/)
 #    chrome://extensions → enable Developer mode → Load unpacked → pick extension/
 #    Optional: click the extension icon → Options → confirm the backend URL
 #    is http://127.0.0.1:3080 (the dsh web port).
@@ -53,7 +53,7 @@ dsh plugin --profile web add dsh-deepseek-capture
 ## Usage
 
 1. With the extension enabled, just chat on `chat.deepseek.com` — the extension syncs automatically.
-2. A "⛁ DeepSeek Capture" button appears at the bottom of the Web sidebar:
+2. A "⛁ Convoport" button appears at the bottom of the Web sidebar:
    - Stat cards: total tokens saved / conversations / today's captures / estimated savings
    - Capture list: title, message count, tokens, import status
 3. Click a conversation → **message-level picker**: check the messages you want (quick-select "first 3 / last 3 / all / clear").
@@ -83,9 +83,9 @@ A `/capture` command also shows the stats overview right in the chat.
 
 ```bash
 # Local link install (same as dsh-md-quiz):
-# add "dsh-deepseek-capture": "link:E:/项目/dsh-deepseek-capture" to the
+# add "convoport": "link:E:/项目/convoport" to the
 # profile's package.json dependencies, then:
-dsh plugin --profile web add dsh-deepseek-capture   # triggers reconcile
+dsh plugin --profile web add convoport   # triggers reconcile
 ```
 
 Server-side changes (`lib/index.js`) require restarting `dsh web`; client-side

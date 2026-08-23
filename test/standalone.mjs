@@ -1,5 +1,5 @@
 /**
- * Standalone smoke test for dsh-deepseek-capture store + event construction.
+ * Standalone smoke test for convoport store + event construction.
  * 不依赖 Cordis 运行时，验证：upsert 幂等、去重、统计、导入事件序列。
  * 运行：node test/standalone.mjs
  */

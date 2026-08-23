@@ -1,5 +1,5 @@
 /**
- * DeepSeek 对话捕获 — background service worker
+ * Convoport — background service worker
  *
  * 接收 content script 发来的捕获消息，批量队列上报到本地
  * DeepSeek Harness 插件的 /capture/ingest 端点（默认 http://127.0.0.1:3080）。

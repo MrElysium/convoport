@@ -1,6 +1,6 @@
 {
   "extensionName": {
-    "message": "DeepSeek 对话捕获 (dsh-deepseek-capture)",
+    "message": "Convoport",
     "description": "扩展在工具栏和 Chrome 商店显示的名称。"
   },
   "extensionDescription": {
@@ -8,7 +8,7 @@
     "description": "扩展在 Chrome 商店显示的描述。"
   },
   "actionTitle": {
-    "message": "DeepSeek 捕获",
+    "message": "Convoport",
     "description": "工具栏按钮的悬停提示。"
   },
   "statusChecking": {
@@ -66,7 +66,7 @@
     "description": "用户点击重试后的弹窗状态。"
   },
   "popupTitle": {
-    "message": "DeepSeek 对话捕获",
+    "message": "Convoport",
     "description": "弹窗标题。"
   },
   "popupSub": {

@@ -1,4 +1,4 @@
-# dsh-deepseek-capture
+# convoport
 
 **DeepSeek Harness 插件：全自动捕获 DeepSeek 网页版对话，100% 本地存储，按消息挑选导入工作区会话，并统计你节省的 Token。**
 
@@ -35,22 +35,22 @@
 
 ```bash
 # 1. 安装插件（npm 发布后；本地开发用 dsh-md-quiz 同款 link 方式）
-dsh plugin --profile web add dsh-deepseek-capture
+dsh plugin --profile web add convoport
 # 重启 dsh web，刷新浏览器
 
 # 2. 加载浏览器扩展（extension/ 目录随 npm 包发布，也可从 GitHub 仓库获取）
-#    位置：node_modules/dsh-deepseek-capture/extension/ 或仓库 extension/ 目录
+#    位置：node_modules/convoport/extension/ 或仓库 extension/ 目录
 #    chrome://extensions → 打开「开发者模式」→ 「加载已解压的扩展程序」→ 选择 extension/ 目录
 #    可选：点击扩展图标 → 设置 → 确认后端地址为 http://127.0.0.1:3080（dsh web 端口）
 ```
 
-> 提示：安装插件后扩展目录在 `node_modules/dsh-deepseek-capture/extension/`；
+> 提示：安装插件后扩展目录在 `node_modules/convoport/extension/`；
 > 也可以直接从 GitHub 仓库（`extension/`）加载，两者内容一致。
 
 ## 用法
 
 1. 浏览器扩展开启后，在 `chat.deepseek.com` 正常对话，扩展自动同步。
-2. Web 侧边栏底部出现「⛁ DeepSeek 捕获」按钮 → 打开面板：
+2. Web 侧边栏底部出现「⛁ Convoport」按钮 → 打开面板：
    - 统计卡：累计 Token / 对话数 / 今日捕获 / 估算金额
    - 捕获列表：每段对话的标题、条数、Token、导入状态
 3. 点某段对话 → **消息级选择视图**：勾选需要的消息（快捷"仅开头 3 条 / 仅结尾 3 条 / 全选 / 清空"）
@@ -80,9 +80,9 @@ dsh plugin --profile web add dsh-deepseek-capture
 
 ```bash
 # 本地 link 安装（照 dsh-md-quiz）：
-cd E:\项目\dsh-deepseek-capture
-# 在 profile 的 package.json dependencies 加 "dsh-deepseek-capture": "link:E:/项目/dsh-deepseek-capture"
-# 然后 dsh plugin --profile web add dsh-deepseek-capture 触发 reconcile
+cd E:\项目\convoport
+# 在 profile 的 package.json dependencies 加 "convoport": "link:E:/项目/convoport"
+# 然后 dsh plugin --profile web add convoport 触发 reconcile
 ```
 
 服务端（lib/index.js）改动需重启 `dsh web`；客户端（lib/client.js）是 no-cache 实时读盘，改完刷新浏览器即可。

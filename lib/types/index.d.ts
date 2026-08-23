@@ -1,5 +1,5 @@
 /**
- * dsh-deepseek-capture — DeepSeek 对话捕获插件（类型声明）
+ * convoport — Convoport插件（类型声明）
  */
 
 /** 一条被捕获的 DeepSeek 网页对话消息。 */

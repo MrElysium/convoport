@@ -32,7 +32,7 @@ async function main() {
   if (!s.ok) throw new Error("plugin not loaded");
 
   // 2. 客户端 bundle
-  const c = await fetch(`${BASE}/plugins/dsh-deepseek-capture/client.js`).then(r => r.status);
+  const c = await fetch(`${BASE}/plugins/convoport/client.js`).then(r => r.status);
   console.log("2. client bundle:", c === 200 ? "200 OK" : "FAIL " + c);
 
   // 3. 模拟扩展上报（10 条，含连续 assistant 打磨过程）

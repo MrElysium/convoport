@@ -1,4 +1,4 @@
-# 发布 dsh-deepseek-capture 到 DeepSeek Harness 生态
+# 发布 convoport 到 DeepSeek Harness 生态
 
 本文档说明如何把这个插件发布成 DSH 生态里可被 `dsh plugin add` 安装、可被
 `dsh-plugin` GitHub 话题收录的正式插件。
@@ -12,9 +12,9 @@
   - `dsh.client = { platform: "web", inject: [...], immediately: true }` → 客户端半区被扫进 `window.__DSH_BOOT__`
   - `exports` 暴露 `.`（服务端）/ `./client`（客户端）/ `./cordis.patch.yml` / `./package.json`
   - `files` 打包 `lib`、`extension`、`cordis.patch.yml`、`README.md`、`PUBLISH.md`、`LICENSE`
-- `cordis.patch.yml`：插入了 `deepseek-capture` 插件行
+- `cordis.patch.yml`：插入了 `convoport` 插件行
 - `lib/index.js`（服务端：/capture 路由 + /capture 命令 + skill）、`lib/client.js`（客户端：侧边栏面板）、`lib/types/index.d.ts`、`LICENSE`
-- `extension/`：浏览器扩展（MV3，**随 npm 包一起发布**；用户可从 `node_modules/dsh-deepseek-capture/extension/` 加载，也可从 GitHub 获取）
+- `extension/`：浏览器扩展（MV3，**随 npm 包一起发布**；用户可从 `node_modules/convoport/extension/` 加载，也可从 GitHub 获取）
 
 **唯一需要你改的**：`package.json` 里的 `repository.url` 占位符
 `<your-account>` 换成你的 GitHub 用户名。
@@ -22,12 +22,12 @@
 ## 2. 发布到 npm
 
 ```bash
-cd dsh-deepseek-capture
+cd convoport
 npm login                 # 登录 npm 账号
 npm publish               # 发布
 ```
 
-> 发布后包名是 `dsh-deepseek-capture`（想换成作用域包如 `@you/dsh-deepseek-capture`，改 `name` 即可）。
+> 发布后包名是 `convoport`（想换成作用域包如 `@you/convoport`，改 `name` 即可）。
 
 ## 3. 建 GitHub 仓库并打 topic
 
@@ -41,11 +41,11 @@ npm publish               # 发布
 
 ```bash
 # 1. 插件
-dsh plugin --profile web add dsh-deepseek-capture
+dsh plugin --profile web add convoport
 # 重启 dsh web，刷新浏览器
 
 # 2. 浏览器扩展（随 npm 包发布，手动加载）
-#    位置：node_modules/dsh-deepseek-capture/extension/
+#    位置：node_modules/convoport/extension/
 #    chrome://extensions → 开发者模式 → 加载已解压的扩展程序 → 选 extension/ 目录
 ```
 
@@ -54,9 +54,9 @@ dsh plugin --profile web add dsh-deepseek-capture
 - [x] `npm pack --dry-run`：18 文件（lib + extension 全套 + 文档），`extension/` 随包发布
 - [x] **干净环境安装测试**（隔离 DSH_HOME + 全新 profile）：tarball → pnpm add →
       `dsh plugin` 自动 reconcile → 插件加载无错误 → stats/ingest/import 全通 →
-      `node_modules/dsh-deepseek-capture/extension/` 文件齐全 → 客户端 bundle 正常服务
-- [ ] `npm publish` 成功，`npm view dsh-deepseek-capture` 能查到
-- [ ] 干净环境 `dsh plugin --profile web add dsh-deepseek-capture` → 重启 → 侧边栏出现「⛁ DeepSeek 捕获」按钮
+      `node_modules/convoport/extension/` 文件齐全 → 客户端 bundle 正常服务
+- [ ] `npm publish` 成功，`npm view convoport` 能查到
+- [ ] 干净环境 `dsh plugin --profile web add convoport` → 重启 → 侧边栏出现「⛁ Convoport」按钮
 - [ ] 扩展在 chat.deepseek.com 打开 → 对话 → popup 显示「已同步」
 - [ ] 面板统计卡显示累计 Token / 对话数
 - [ ] 点开对话 → 勾选消息 → 导入 → 左侧会话列表出现新会话，历史为选中消息

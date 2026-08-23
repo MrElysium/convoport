@@ -1,5 +1,5 @@
 /**
- * DeepSeek 对话捕获 — content script
+ * Convoport — content script
  *
  * 在 chat.deepseek.com 页面运行：
  * 1. 监听 SPA 路由变化（history pushState/replaceState + popstate），
@@ -116,7 +116,7 @@ async function syncSession(force) {
     });
     return { ok: true, reason: "synced", count: messages.length };
   } catch (e) {
-    console.debug("[dsh-deepseek-capture] sync failed:", e && e.message);
+    console.debug("[convoport] sync failed:", e && e.message);
     return { ok: false, reason: "error", error: e && e.message };
   }
 }

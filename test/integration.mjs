@@ -31,7 +31,7 @@ async function main() {
     persisted.push(session.id);
   });
   const session = store.create("session-live-import-1", {
-    meta: { source: "deepseek-capture", captureId: "cap-test", title: "测试导入" }
+    meta: { source: "convoport", captureId: "cap-test", title: "测试导入" }
   });
   console.log("created live session:", session.id);
 
