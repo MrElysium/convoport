@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<title>DeepSeek 捕获 — 设置</title>
+<style>
+  body { font-family: system-ui, "Microsoft YaHei", sans-serif; max-width: 480px; margin: 32px auto; padding: 0 16px; color: #1a1a1e; }
+  h1 { font-size: 18px; }
+  label { display: block; margin: 16px 0 6px; font-size: 13px; font-weight: 600; }
+  input { width: 100%; padding: 8px 10px; font-size: 13px; border: 1px solid #ccc; border-radius: 8px; box-sizing: border-box; }
+  .hint { font-size: 11.5px; color: #888; line-height: 1.6; margin-top: 6px; }
+  button { margin-top: 16px; padding: 9px 18px; font-size: 13px; background: #2f6fed; color: #fff; border: none; border-radius: 8px; cursor: pointer; }
+  .ok { color: #1a9d63; font-size: 12px; margin-top: 10px; }
+</style>
+</head>
+<body>
+  <h1>⛁ DeepSeek 对话捕获 — 设置</h1>
+  <label for="backend">本地后端地址</label>
+  <input id="backend" placeholder="http://127.0.0.1:3080" />
+  <div class="hint">默认指向 dsh web 的端口（3080）。扩展会把捕获的对话 POST 到 <code>/capture/ingest</code>，
+    数据 100% 本地，不会上传到任何云端。</div>
+  <button id="save">保存</button>
+  <div class="ok" id="ok"></div>
+  <script src="options.js"></script>
+</body>
+</html>

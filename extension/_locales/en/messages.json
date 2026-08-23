@@ -1,0 +1,84 @@
+{
+  "extensionName": {
+    "message": "DeepSeek Capture (dsh-deepseek-capture)",
+    "description": "Extension name shown in the toolbar and Chrome Web Store."
+  },
+  "extensionDescription": {
+    "message": "Auto-capture chat.deepseek.com conversations and sync them to your local DeepSeek Harness plugin. 100% local, zero upload.",
+    "description": "Extension description shown in the Chrome Web Store."
+  },
+  "actionTitle": {
+    "message": "DeepSeek Capture",
+    "description": "Tooltip of the toolbar action button."
+  },
+  "statusChecking": {
+    "message": "Checking…",
+    "description": "Popup status while checking sync state."
+  },
+  "statusNeverSynced": {
+    "message": "Not synced yet",
+    "description": "Popup status before first sync."
+  },
+  "statusSynced": {
+    "message": "Synced $COUNT$ conversation(s)",
+    "description": "Popup status after a successful sync.",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "statusFailed": {
+    "message": "Sync failed ($ERROR$)",
+    "description": "Popup status after a failed sync.",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "HTTP 500"
+      }
+    }
+  },
+  "backendHint": {
+    "message": "Local backend defaults to http://127.0.0.1:3080 (dsh web port)",
+    "description": "Hint shown before the first sync."
+  },
+  "lastSync": {
+    "message": "Last sync",
+    "description": "Label for the last sync time."
+  },
+  "backend": {
+    "message": "Backend",
+    "description": "Label for the backend URL."
+  },
+  "retryIn": {
+    "message": "Retry in $SECONDS$s",
+    "description": "Countdown until next retry.",
+    "placeholders": {
+      "seconds": {
+        "content": "$1",
+        "example": "4"
+      }
+    }
+  },
+  "retrying": {
+    "message": "Retrying…",
+    "description": "Popup status right after the user clicks retry."
+  },
+  "popupTitle": {
+    "message": "DeepSeek Capture",
+    "description": "Popup heading."
+  },
+  "popupSub": {
+    "message": "Auto-sync to local Harness plugin",
+    "description": "Popup subtitle."
+  },
+  "retry": {
+    "message": "Retry",
+    "description": "Retry link."
+  },
+  "settings": {
+    "message": "Settings",
+    "description": "Settings link."
+  }
+}

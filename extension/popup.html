@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<title>DeepSeek 捕获</title>
+<style>
+  body { width: 280px; font-family: system-ui, "Microsoft YaHei", sans-serif; margin: 0; padding: 14px; color: #1a1a1e; }
+  h1 { font-size: 14px; margin: 0 0 4px; }
+  .sub { font-size: 11px; color: #888; margin-bottom: 12px; }
+  .row { display: flex; align-items: center; gap: 8px; padding: 6px 0; font-size: 12px; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; }
+  .dot.on { background: #1a9d63; box-shadow: 0 0 6px #1a9d63; }
+  .dot.off { background: #d03050; }
+  .dot.unknown { background: #bbb; }
+  .meta { font-size: 11px; color: #888; margin-top: 8px; line-height: 1.6; }
+  a { color: #2f6fed; cursor: pointer; text-decoration: none; font-size: 12px; }
+</style>
+</head>
+<body>
+  <h1>⛁ <span data-i18n="popupTitle">DeepSeek Capture</span></h1>
+  <div class="sub" data-i18n="popupSub">Auto-sync to local Harness plugin</div>
+  <div class="row"><span class="dot unknown" id="dot"></span><span id="status" data-i18n="statusChecking">Checking…</span></div>
+  <div class="row" style="justify-content:space-between">
+    <a id="captureNow">⛁ 立即捕获当前对话</a>
+  </div>
+  <div class="row" style="justify-content:space-between">
+    <a id="retry" data-i18n="retry">Retry</a>
+    <a id="openOptions" data-i18n="settings">Settings</a>
+  </div>
+  <div class="meta" id="meta"></div>
+  <script src="popup.js"></script>
+</body>
+</html>

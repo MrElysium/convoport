@@ -1,0 +1,62 @@
+{
+  "name": "convoport",
+  "version": "0.1.1",
+  "description": "Capture AI web conversations to local JSON + SQLite, and port selected messages into agent harnesses as live, continuable sessions.",
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-connection",
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-sidebar"
+      ],
+      "immediately": true
+    }
+  },
+  "files": [
+    "lib",
+    "extension",
+    "cordis.patch.yml",
+    "README.md",
+    "PUBLISH.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "convoport",
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "deepseek",
+    "capture",
+    "conversation",
+    "token",
+    "port",
+    "ai"
+  ],
+  "scripts": {
+    "test": "node test/standalone.mjs && node test/session-events.mjs && node test/integration.mjs && node test/edge-cases.mjs && node test/content-logic.mjs && node test/content-boot.mjs && node test/background-queue.mjs && node test/http-e2e.mjs && node test/verify-fix.mjs && node test/verify-import.mjs && node test/verify-attach.mjs",
+    "test:e2e": "node test/extension-e2e.mjs",
+    "pack:check": "npm pack --dry-run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrElysium/convoport.git"
+  },
+  "license": "MIT"
+}

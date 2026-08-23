@@ -1,0 +1,84 @@
+{
+  "extensionName": {
+    "message": "DeepSeek 对话捕获 (dsh-deepseek-capture)",
+    "description": "扩展在工具栏和 Chrome 商店显示的名称。"
+  },
+  "extensionDescription": {
+    "message": "自动捕获 chat.deepseek.com 的对话并同步到本地 DeepSeek Harness 插件。100% 本地，零上传。",
+    "description": "扩展在 Chrome 商店显示的描述。"
+  },
+  "actionTitle": {
+    "message": "DeepSeek 捕获",
+    "description": "工具栏按钮的悬停提示。"
+  },
+  "statusChecking": {
+    "message": "检查中…",
+    "description": "弹窗检查同步状态时显示。"
+  },
+  "statusNeverSynced": {
+    "message": "尚未同步",
+    "description": "首次同步前的弹窗状态。"
+  },
+  "statusSynced": {
+    "message": "已同步 $COUNT$ 段对话",
+    "description": "同步成功后的弹窗状态。",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "statusFailed": {
+    "message": "同步失败（$ERROR$）",
+    "description": "同步失败后的弹窗状态。",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "HTTP 500"
+      }
+    }
+  },
+  "backendHint": {
+    "message": "本地后端默认 http://127.0.0.1:3080（dsh web 端口）",
+    "description": "首次同步前显示的提示。"
+  },
+  "lastSync": {
+    "message": "最近同步",
+    "description": "最近同步时间的标签。"
+  },
+  "backend": {
+    "message": "后端",
+    "description": "后端地址的标签。"
+  },
+  "retryIn": {
+    "message": "将在 $SECONDS$s 后重试",
+    "description": "距下次重试的倒计时。",
+    "placeholders": {
+      "seconds": {
+        "content": "$1",
+        "example": "4"
+      }
+    }
+  },
+  "retrying": {
+    "message": "已触发重试…",
+    "description": "用户点击重试后的弹窗状态。"
+  },
+  "popupTitle": {
+    "message": "DeepSeek 对话捕获",
+    "description": "弹窗标题。"
+  },
+  "popupSub": {
+    "message": "自动同步到本地 Harness 插件",
+    "description": "弹窗副标题。"
+  },
+  "retry": {
+    "message": "立即重试",
+    "description": "重试链接。"
+  },
+  "settings": {
+    "message": "设置",
+    "description": "设置链接。"
+  }
+}

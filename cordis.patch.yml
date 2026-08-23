@@ -1,0 +1,8 @@
+# dsh-deepseek-capture 插件补丁层（bundle patch）
+#
+# `dsh plugin --profile web add dsh-deepseek-capture` 安装后自动应用。
+
+# ── 插件本体：服务端（捕获接收/资产库/导入）+ 客户端（仪表盘面板） ──
+- insert:
+    - id: deepseek-capture
+      name: dsh-deepseek-capture
